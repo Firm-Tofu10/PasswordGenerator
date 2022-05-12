@@ -1,0 +1,64 @@
+body {
+    background-color: grey; ; 
+    color: greydark;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+
+}
+
+
+.container {
+    background-color: brown;
+    border: 4px solid black;
+    padding: rem2;
+    border-radius: 4rem;
+    display: flex;
+    columns: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:  375px;
+    height: 425px;
+}   
+
+.number-input{
+    width: 3rem;
+    height: 25px;
+    width: 60px;
+}
+
+.password-display{
+    background-color:white;
+   color:black;
+   padding: 2rem;
+   border: 1px grey;
+   height: 1rem;
+   word-break: break-all;
+   border: solid grey;
+   border-radius: 1rem
+}
+
+.btn{
+    grid-column: span 2;
+    background-color: grey;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 25px;
+}
+.characterAmount{
+    width: 600px;
+
+}
+
+.includeUppercase {
+ text-align: center;   
+}
+
