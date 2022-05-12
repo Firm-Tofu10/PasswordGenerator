@@ -1,4 +1,3 @@
-var lowercase
 
 
 
@@ -6,7 +5,8 @@ var lowercase
 
 
 
-let lowercase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
+const lowercase = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
+console.log(lowercase)
 
 let Symbol = ['!','@','#','$','%','^','&','*'];
 
