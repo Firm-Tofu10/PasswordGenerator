@@ -16,10 +16,6 @@
 
 //I want to make a Funcation that takes into account what is and is not checked, then math randoms the character amounts to the 4 options (C) then have the arrays funtions receive those valuse then push (C) to generated charcters to each function with the correct (C).
 // (C) = the charicter amounts sent to each of the 4 options randmoly probly using math random.
-element.addEventListener("click",function(pressPush){
-    document.getElementById("demo").innerHTML = "Im here";
-});
 
-function pressPush(){
-    document.getElementById("demo").innerHTML = "Im here";
-}
+function pressPush(){document.getElementById("btnGenerate").addEventListener("click",displayDate)};
+console.log(btnGenerate);
