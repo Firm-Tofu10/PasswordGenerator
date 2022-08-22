@@ -19,3 +19,4 @@
 
 function pressPush(){document.getElementById("btnGenerate").addEventListener("click",displayDate)};
 console.log(btnGenerate);
+
