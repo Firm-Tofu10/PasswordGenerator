@@ -22,8 +22,8 @@ function checkCheckbox(element) {
 	checkBoxMap[element] = checkboxValue;
 
 
-		console.log(checkbox);
-	if (checkbox.checked) {
+		console.log("checkBoxValue");
+	if ("checkBoxValue".checked) {
 		console.log("true");
 		return true;
 	}
@@ -37,13 +37,13 @@ function checkCheckbox(element) {
 	const gen = () => {
 		passwordDisplay = ""
 		var characterAmount = document.getElementById("characterAmount").value;
-
 		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
-		if (checkBoxMap['sym']) {
+		
+		if (checkBoxMap['sym']) { bigArray = [...bigArray,...coolSymbol]
 		}
-		if (checkBoxMap['digit']) {
+		if (checkBoxMap['digit']) bigArray = { [...bigArray,...coolNumber]
 		}
-		if (checkBoxMap['up']) {
+		if (checkBoxMap['up']) { bigArray = [...bigArray,...lowerCase]
 		}
 		for (let i = 0; i < characterAmount; i++) {
 			const random = Math.floor(Math.random() * bigArray.length);
