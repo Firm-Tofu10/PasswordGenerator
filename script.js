@@ -7,12 +7,21 @@ const uperCase = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D
 
 const coolNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
+let checkBoxMap = {
+	up: false,
+	digit: false,
+	sym: false
+}
 
 var passwordDisplay = "";
 
 function checkCheckbox(element) {
 	console.log(element);
-	const checkbox = document.getElementById(element);
+	const checkboxValue = document.getElementById(element).value;
+
+	checkBoxMap[element] = checkboxValue;
+
+
 		console.log(checkbox);
 	if (checkbox.checked) {
 		console.log("true");
@@ -29,14 +38,21 @@ function checkCheckbox(element) {
 		passwordDisplay = ""
 		var characterAmount = document.getElementById("characterAmount").value;
 
+		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
+		if (checkBoxMap['sym']) {
+		}
+		if (checkBoxMap['digit']) {
+		}
+		if (checkBoxMap['up']) {
+		}
 		for (let i = 0; i < characterAmount; i++) {
-			const random = Math.floor(Math.random() * lowerCase.length);
-			passwordDisplay += lowerCase[random]
+			const random = Math.floor(Math.random() * bigArray.length);
+			passwordDisplay += bigArray[random]
 		}
 
 		document.getElementById('passwordDisplay').innerHTML = passwordDisplay;
 
-		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
+		
 	};
 
 	//The for loops below are used to generate the random arrays to the required length.
