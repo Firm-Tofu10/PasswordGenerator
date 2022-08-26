@@ -6,21 +6,20 @@ const coolSymbol = ['!', '@', '#', '$', '%', '^', '&', '*'];
 const uperCase = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];
 
 const coolNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
+//Set all the IDs to false till checked
 let checkBoxMap = {
 	up: false,
 	digit: false,
 	sym: false
 }
-
+//Set the password field to empty
 var passwordDisplay = "";
-
+//Checks if the checkbox is checked
 function checkCheckbox(element) {
 	console.log(element);
 	const checkboxValue = document.getElementById(element).value;
 
 	checkBoxMap[element] = checkboxValue;
-
 
 		console.log("checkBoxValue");
 	if ("checkBoxValue".checked) {
@@ -33,12 +32,12 @@ function checkCheckbox(element) {
 	}
 };
 
-
+//Generates the password field from the bigArrays below based on the checkbox values
 	const gen = () => {
 		passwordDisplay = ""
 		var characterAmount = document.getElementById("characterAmount").value;
 		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
-		
+
 		if (checkBoxMap['sym']) { bigArray = [...bigArray,...coolSymbol]
 		}
 		if (checkBoxMap['digit']) bigArray = { [...bigArray,...coolNumber]
@@ -54,28 +53,3 @@ function checkCheckbox(element) {
 
 		
 	};
-
-	//The for loops below are used to generate the random arrays to the required length.
-
-	// for (var i = 0; i <= passwordLength; i++) {
-	// 	var randomNumber = Math.floor(Math.random() * lowerCase.length);
-	// 	password += chars.substring(randomNumber, randomNumber + 1);
-	// }
-
-	// for (var i = 0; i <= passwordLength; i++) {
-	// 	var randomNumber = Math.floor(Math.random() * upperCase.length);
-	// 	password += chars.substring(randomNumber, randomNumber + 1);
-	// }
-
-	// for (var i = 0; i <= passwordLength; i++) {
-	// 	var randomNumber = Math.floor(Math.random() * coolSymbol.length);
-	// 	password += chars.substring(randomNumber, randomNumber + 1);
-	// }
-
-	// for (var i = 0; i <= passwordLength; i++) {
-	// 	var randomNumber = Math.floor(Math.random() * coolNumber.length);
-	// 	password += chars.substring(randomNumber, randomNumber + 1);
-	// }
-
-// function gen(){document.getElementById("btnGenerate").addEventListener("onclick")};
-

@@ -9,19 +9,22 @@
 </head>
     <body>
         <div class="container">
+					<!--Title of the container-->
             <h1 class="title">Password Generator</h1>
+						<!--The field where the password is generated-->
             <h3 class="password-display"id=passwordDisplay>##########</h3>
                 <form id="paswordGenForm" class="form">
-                    <button type="button" onClick="gen()" class="btn" id="btnGenerate">Generate</button>
-                    
+                  <!--Button used to generate the code-->  
+									<button type="button" onClick="gen()" class="btn" id="btnGenerate">Generate</button>
+                    <!--Field used to specify the amount of characters in the code-->
                     <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmount">
-
+										<!--Uppercase checkbox-->
                     <label class="checkbox" for="uppercase">Uppercase</label>
                     <input id="up" onclick="checkCheckbox('up')" class="checkbox" type="checkbox" id="AUppercase">
-                    
+                    <!--Number checkbox-->
                     <label class="checkbox" for="numbers">Numbers</label>
                     <input id="digit" onclick="checkCheckbox('digit')" class="checkbox" type="checkbox" id="ANumbers">
-              
+										<!--Symbol checkbox-->
                     <label class="checkbox" for="symbols">Symbols</label>
                     <input id="sym" onclick="checkCheckbox('sym') "class="checkbox" type="checkbox" id="ASymbols">
                 </form>
