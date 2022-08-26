@@ -7,18 +7,13 @@ const uperCase = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D
 
 const coolNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
-// var characterAmount = document.getElementById("number-input");
 
-// function gen() {
-// 	var password = "";
-// 	for (i = 0; i <= characterAmount.ariaValueMax; i++) {
-// 		if (checkbox.checked) {
-// 		}
-// 	}
-// };
+var passwordDisplay = "";
 
 function checkCheckbox(element) {
+	console.log(element);
 	const checkbox = document.getElementById(element);
+		console.log(checkbox);
 	if (checkbox.checked) {
 		console.log("true");
 		return true;
@@ -30,13 +25,19 @@ function checkCheckbox(element) {
 };
 
 
-	// const removeRandom = (lowerCase) => {
-	// 	while (array.length) {
-	// 		const random = Math.floor(Math.random() * array.length);
-	// 		const el = array.splice(random, 1)[0];
-	// 		console.log(el);
-	// 	}
-	// };
+	const gen = () => {
+		passwordDisplay = ""
+		var characterAmount = document.getElementById("characterAmount").value;
+
+		for (let i = 0; i < characterAmount; i++) {
+			const random = Math.floor(Math.random() * lowerCase.length);
+			passwordDisplay += lowerCase[random]
+		}
+
+		document.getElementById('passwordDisplay').innerHTML = passwordDisplay;
+
+		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
+	};
 
 	//The for loops below are used to generate the random arrays to the required length.
 
