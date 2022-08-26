@@ -11,23 +11,22 @@ let checkBoxMap = {
 	up: false,
 	digit: false,
 	sym: false
-}
+	// if ("checkBoxValue".checked === true) {
+// }
+};
 //Set the password field to empty
 var passwordDisplay = "";
 //Checks if the checkbox is checked
 function checkCheckbox(element) {
-	console.log(element);
-	const checkboxValue = document.getElementById(element).value;
-
-	checkBoxMap[element] = checkboxValue;
-
-		console.log("checkBoxValue");
-	if ("checkBoxValue".checked) {
+	const checkboxValue = document.getElementById(element).checked
+	checkBoxMap[element] = checkboxValue
+	if (checkboxValue) {
 		console.log("true");
 		return true;
 	}
-	else {
-		console.log("false");
+		else 
+		{
+		console.log("false"); 
 		return false;
 	}
 };
@@ -36,13 +35,12 @@ function checkCheckbox(element) {
 	const gen = () => {
 		passwordDisplay = ""
 		var characterAmount = document.getElementById("characterAmount").value;
-		var bigArray = [...uperCase, ...coolSymbol, ...coolNumber, ...lowerCase]
-
+		var bigArray = [...lowerCase]
 		if (checkBoxMap['sym']) { bigArray = [...bigArray,...coolSymbol]
 		}
-		if (checkBoxMap['digit']) bigArray = { [...bigArray,...coolNumber]
+		if (checkBoxMap['digit']) { bigArray =  [...bigArray,...coolNumber]
 		}
-		if (checkBoxMap['up']) { bigArray = [...bigArray,...lowerCase]
+		if (checkBoxMap['up']) { bigArray = [...bigArray,...uperCase]
 		}
 		for (let i = 0; i < characterAmount; i++) {
 			const random = Math.floor(Math.random() * bigArray.length);
